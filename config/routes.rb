@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  
-  resources :articles
-  
-  root 'welcome#index'
+
+     namespace :api do 
+         namespace :v1 do 
+             resources :articles, only: [:index, :create, :destroy, :update] 
+         end 
+     end  
+    
  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
