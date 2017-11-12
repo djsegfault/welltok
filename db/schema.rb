@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20171111212014) do
 
-  create_table "articles", force: :cascade do |t|
+  create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci" do |t|
     t.string "title"
     t.text "description"
     t.text "author"
